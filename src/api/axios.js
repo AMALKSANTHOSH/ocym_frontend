@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Change this one line when deploying to production
-const BASE_URL = 'https://ocym-backend.onrender.com';
+const BASE_URL = 'https://ocym-backend.onrender.com/api';
 
 const api = axios.create({ baseURL: BASE_URL });
 
