@@ -1,0 +1,66 @@
+/* src/index.css */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f8f5f0; color:#333; }
+
+/* ── Buttons ── */
+.btn { display:inline-block; padding:0.65rem 1.6rem; border-radius:25px; font-weight:600; cursor:pointer; border:none; text-decoration:none; font-size:0.9rem; transition:all 0.2s; }
+.btn-primary   { background:#6b1a1a; color:#fff; }
+.btn-primary:hover { background:#8b2020; transform:translateY(-1px); }
+.btn-gold      { background:#c9a227; color:#1a0a0a; }
+.btn-gold:hover{ background:#b8911f; }
+.btn-outline   { border:2px solid #6b1a1a; color:#6b1a1a; background:transparent; }
+.btn-outline:hover{ background:#6b1a1a; color:#fff; }
+.btn-sm        { padding:0.35rem 0.9rem; font-size:0.82rem; border-radius:20px; }
+.btn-danger    { background:#e74c3c; color:#fff; border-radius:6px; }
+.btn-danger:hover{ background:#c0392b; }
+.btn-success   { background:#27ae60; color:#fff; border-radius:6px; }
+.btn-success:hover{ background:#219a52; }
+
+/* ── Alerts ── */
+.alert { padding:0.75rem 1rem; border-radius:7px; margin-bottom:1rem; font-size:0.875rem; }
+.alert-success { background:#f0faf4; color:#155724; border:1px solid #c3e6cb; }
+.alert-error   { background:#fdf0f0; color:#721c24; border:1px solid #f5c6cb; }
+
+/* ── Admin layout ── */
+.admin-layout { display:flex; min-height:100vh; }
+.admin-main   { flex:1; padding:2rem; background:#f5f0eb; overflow-y:auto; }
+.admin-main h2{ color:#6b1a1a; margin-bottom:1.5rem; font-family:'Georgia',serif; }
+
+/* ── Table ── */
+.table-wrap { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.07); }
+table { width:100%; border-collapse:collapse; }
+th { background:#6b1a1a; color:#fff; padding:0.85rem 1rem; text-align:left; font-size:0.83rem; }
+td { padding:0.8rem 1rem; border-bottom:1px solid #f0ebe5; font-size:0.875rem; vertical-align:middle; }
+tr:hover td { background:#fdf8f5; }
+
+/* ── Badges ── */
+.badge { display:inline-block; padding:0.2rem 0.6rem; border-radius:12px; font-size:0.75rem; font-weight:600; }
+.badge-green  { background:#d4edda; color:#155724; }
+.badge-yellow { background:#fff3cd; color:#856404; }
+.badge-red    { background:#f8d7da; color:#721c24; }
+.badge-blue   { background:#d1ecf1; color:#0c5460; }
+.badge-maroon { background:#f5e0e0; color:#6b1a1a; }
+
+/* ── Stats cards ── */
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:1rem; margin-bottom:2rem; }
+.stat-card  { background:#fff; border-radius:10px; padding:1.5rem; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.07); border-top:3px solid #c9a227; }
+.stat-card .number { font-size:2rem; font-weight:800; color:#6b1a1a; }
+.stat-card .label  { font-size:0.78rem; color:#888; margin-top:0.25rem; }
+
+/* ── Form groups ── */
+.form-group { margin-bottom:1rem; }
+.form-group label { display:block; margin-bottom:0.3rem; font-size:0.875rem; font-weight:500; color:#555; }
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width:100%; padding:0.65rem 0.9rem; border:1.5px solid #ddd;
+  border-radius:7px; font-size:0.9rem; outline:none; font-family:inherit;
+  transition:border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus { border-color:#6b1a1a; }
+.form-group textarea { min-height:90px; resize:vertical; }
+
+/* ── Card ── */
+.card { background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.07); overflow:hidden; }
