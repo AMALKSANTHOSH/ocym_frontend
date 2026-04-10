@@ -41,7 +41,7 @@ const Footer = () => (
         <div>
           <h4 style={{color:'#f0c040',marginBottom:'1rem',fontSize:'0.9rem'}}>Contact Us</h4>
           <p style={{fontSize:'0.82rem',color:'#a08080',lineHeight:1.8}}>📍 Kuzhimattom, Kottayam, Kerala</p>
-          <p style={{fontSize:'0.82rem',color:'#a08080',lineHeight:1.8}}>📞 +91 XXXXX XXXXX</p>
+          <p style={{fontSize:'0.82rem',color:'#a08080',lineHeight:1.8}}>📞 +91 7558043864</p>
           <p style={{fontSize:'0.82rem',color:'#a08080',lineHeight:1.8}}>✉️ ocymkuzhimattom@gmail.com</p>
         </div>
 
