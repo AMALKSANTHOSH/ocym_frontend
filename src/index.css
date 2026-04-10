@@ -64,3 +64,132 @@ tr:hover td { background:#fdf8f5; }
 
 /* ── Card ── */
 .card { background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.07); overflow:hidden; }
+
+/* ══════════════════════════════════════════════════
+   MOBILE RESPONSIVE — applies to all pages
+══════════════════════════════════════════════════ */
+
+/* Admin sidebar hidden on mobile, shown as top bar */
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column !important;
+  }
+  /* Sidebar becomes a horizontal scroll nav on mobile */
+  .admin-layout > div:first-child {
+    width: 100% !important;
+    min-height: unset !important;
+    flex-direction: row !important;
+    overflow-x: auto;
+    padding: 0.5rem 0 !important;
+  }
+  .admin-layout > div:first-child ul {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0 0.5rem !important;
+    gap: 0.25rem !important;
+  }
+  .admin-layout > div:first-child ul li a,
+  .admin-layout > div:first-child ul li button {
+    white-space: nowrap;
+    padding: 0.45rem 0.85rem !important;
+    font-size: 0.78rem !important;
+    border-radius: 20px !important;
+    border-left: none !important;
+  }
+  /* Hide logo/name in sidebar on mobile */
+  .admin-layout > div:first-child > div:first-child {
+    display: none !important;
+  }
+  .admin-main {
+    padding: 1rem !important;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Public pages mobile */
+@media (max-width: 640px) {
+  /* Navbar top bar */
+  .ocym-topbar {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem 1rem !important;
+    text-align: center;
+  }
+  .ocym-topbar .legacy-badge {
+    border-left: none !important;
+    padding-left: 0 !important;
+    border-top: 1px solid rgba(201,162,39,0.3);
+    padding-top: 0.4rem !important;
+  }
+  /* Nav links — horizontal scroll */
+  nav ul {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 0 !important;
+  }
+  /* Hero */
+  .hero h1, section h1 { font-size: 1.5rem !important; }
+  section img.hero-logo { height: 80px !important; }
+  /* Contact page 2-col → 1-col */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Events, gallery cards */
+  .card-grid, .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Gallery mosaic — disable on mobile */
+  .gallery-mosaic {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 140px !important;
+  }
+  .gallery-mosaic > div {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+  /* About page */
+  .about-vm-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .about-history-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .about-committee-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* Form pages */
+  .form-page {
+    padding: 1rem !important;
+    align-items: flex-start !important;
+  }
+  .form-box {
+    padding: 1.5rem 1rem !important;
+  }
+  /* Register 2-col grid → 1 col */
+  .register-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .register-grid > div[style*="span 2"] {
+    grid-column: span 1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .about-committee-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
