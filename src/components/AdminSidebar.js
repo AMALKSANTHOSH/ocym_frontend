@@ -28,7 +28,7 @@ const AdminSidebar = () => {
         <img src="/ocym-logo.png" alt="OCYM" style={{height:50,marginBottom:'0.5rem',opacity:0.9}} />
         <div style={{fontSize:'0.85rem',fontWeight:700}}>
           <span style={{color:'#f0c040'}}>OCYM </span>
-          <span style={{color:'#fff'}}>Kuzhimattom</span>
+          <span style={{color:'#fff'}}>Kuzhimattom Pally</span>
         </div>
         <div style={{color:'#c8a0a0',fontSize:'0.72rem',marginTop:'0.2rem'}}>Admin Panel</div>
         {user && <div style={{color:'#e0c0c0',fontSize:'0.75rem',marginTop:'0.5rem'}}>👤 {user.name}</div>}

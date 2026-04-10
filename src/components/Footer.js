@@ -11,7 +11,7 @@ const Footer = () => (
             <img src="/ocym-logo.png" alt="OCYM" style={{height:55,filter:'drop-shadow(0 2px 6px rgba(0,0,0,0.5))'}} />
             <div>
               <span style={{color:'#f0c040',fontWeight:700,fontSize:'0.95rem'}}>OCYM </span>
-              <span style={{color:'#fff',fontWeight:700,fontSize:'0.95rem'}}>Kuzhimattom</span>
+              <span style={{color:'#fff',fontWeight:700,fontSize:'0.95rem'}}>Kuzhimattom Pally</span>
               <div style={{color:'#e0c8c8',fontSize:'0.75rem'}}>St. George Unit</div>
             </div>
           </div>

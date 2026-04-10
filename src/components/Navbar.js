@@ -30,7 +30,7 @@ const Navbar = () => {
           <div>
             <div>
               <span style={{color:'#f0c040',fontWeight:800,fontSize:'1.25rem',fontFamily:'Georgia,serif'}}>OCYM </span>
-              <span style={{color:'#ffffff',fontWeight:800,fontSize:'1.25rem',fontFamily:'Georgia,serif'}}>Kuzhimattom</span>
+              <span style={{color:'#ffffff',fontWeight:800,fontSize:'1.25rem',fontFamily:'Georgia,serif'}}>Kuzhimattom Pally</span>
             </div>
             <div style={{color:'#e8d0d0',fontSize:'0.76rem',marginTop:'0.1rem'}}>
               St. George Unit · Malankara Orthodox Syrian Church
