@@ -57,7 +57,7 @@ const Footer = () => (
       </div>
     </div>
     <div style={{borderTop:'1px solid #2a1010',padding:'1rem 2rem',textAlign:'center',fontSize:'0.78rem',color:'#5a3535'}}>
-      © {new Date().getFullYear()} St. George OCYM Kuzhimattom · Malankara Orthodox Syrian Church
+      © {new Date().getFullYear()} St. George OCYM Kuzhimattom · Malankara Orthodox Syrian Church · All rights reserved · Developed by Amal K Santhosh
     </div>
   </footer>
 );
