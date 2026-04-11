@@ -6,7 +6,7 @@ export default function Home(){
   const [events,setEvents]=useState([]);
   const [gallery,setGallery]=useState([]);
   useEffect(()=>{
-    api.get('/events').then(r=>setEvents(r.data.slice(0,3))).catch(()=>{});
+    api.get('/events?type=upcoming').then(r=>setEvents(r.data.slice(0,3))).catch(()=>{});
     api.get('/gallery').then(r=>setGallery(r.data.slice(0,6))).catch(()=>{});
   },[]);
   return(<div>
@@ -15,7 +15,7 @@ export default function Home(){
       <div style={{maxWidth:900,margin:'0 auto',textAlign:'center',position:'relative',zIndex:1}}>
         <img src="/ocym-logo.png" alt="OCYM" style={{height:120,width:'auto',marginBottom:'1.5rem',filter:'drop-shadow(0 4px 16px rgba(0,0,0,0.5))'}}/>
         <h1 style={{fontSize:'2.4rem',fontWeight:800,marginBottom:'0.5rem',lineHeight:1.2,fontFamily:'Georgia,serif'}}>
-          <span style={{color:G}}>OCYM </span><span style={{color:'#fff'}}>Kuzhimattom Pally</span>
+          <span style={{color:G}}>OCYM </span><span style={{color:'#fff'}}>Kuzhimattom</span>
         </h1>
         <p style={{fontSize:'0.95rem',color:'#e0c8c8',marginBottom:'0.4rem'}}>St. George Unit · Orthodox Christian Youth Movement</p>
         <div style={{display:'inline-flex',alignItems:'center',gap:'0.6rem',background:'rgba(201,162,39,0.15)',border:'1px solid rgba(201,162,39,0.5)',borderRadius:30,padding:'0.4rem 1.2rem',margin:'1rem 0 1.5rem'}}>
@@ -58,7 +58,7 @@ export default function Home(){
         <h2 style={{textAlign:'center',color:M,fontSize:'1.7rem',marginBottom:'0.5rem',fontFamily:'Georgia,serif'}}>Upcoming Events</h2>
         <p style={{textAlign:'center',color:'#888',marginBottom:'2.5rem'}}>Stay connected with our activities</p>
         {events.length===0?(
-          <div style={{textAlign:'center',padding:'3rem',color:'#aaa',background:'#fff',borderRadius:12,border:'1px dashed #ddd'}}><p style={{fontSize:'2.5rem',marginBottom:'0.5rem'}}>📅</p><p>No upcoming events yet.</p></div>
+          <div style={{textAlign:'center',padding:'3rem',color:'#aaa',background:'#fff',borderRadius:12,border:'1px dashed #ddd'}}><p style={{fontSize:'2.5rem',marginBottom:'0.5rem'}}>📅</p><p style={{color:'#666',fontWeight:600}}>No upcoming events right now</p><p style={{fontSize:'0.85rem',marginTop:'0.3rem'}}>Check back soon!</p></div>
         ):(
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(290px,1fr))',gap:'1.5rem'}}>
             {events.map(e=>(
