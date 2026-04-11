@@ -18,6 +18,7 @@ const Navbar = () => {
     { to:'/about',   label:'About',   icon:'⛪' },
     { to:'/events',  label:'Events',  icon:'📅' },
     { to:'/gallery', label:'Gallery', icon:'🖼️' },
+    { to:'https://moscbible.com/', label:'Read the Bible', icon:'📖', external:true },
     { to:'/contact', label:'Contact', icon:'✉️' },
   ];
 
@@ -110,20 +111,39 @@ const Navbar = () => {
             const active = location.pathname === l.to;
             return (
               <li key={l.to}>
-                <Link to={l.to} style={{
-                  color: active ? GOLD : '#e0c8c8',
-                  textDecoration: 'none',
-                  fontSize: '0.875rem',
-                  fontWeight: active ? 700 : 500,
-                  padding: '0.45rem 0.9rem',
-                  borderRadius: 4,
-                  display: 'block',
-                  background: active ? 'rgba(201,162,39,0.15)' : 'transparent',
-                  borderBottom: active ? `2px solid ${GOLD}` : '2px solid transparent',
-                  transition: 'all 0.2s',
-                }}>
-                  {l.label}
-                </Link>
+                {l.external ? (
+                  <a href={l.to} target="_blank" rel="noopener noreferrer" style={{
+                    color: '#f0c040',
+                    textDecoration: 'none',
+                    fontSize: '0.875rem',
+                    fontWeight: 600,
+                    padding: '0.45rem 0.9rem',
+                    borderRadius: 4,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.3rem',
+                    background: 'rgba(201,162,39,0.1)',
+                    borderBottom: '2px solid rgba(201,162,39,0.5)',
+                    transition: 'all 0.2s',
+                  }}>
+                    📖 {l.label}
+                  </a>
+                ) : (
+                  <Link to={l.to} style={{
+                    color: active ? GOLD : '#e0c8c8',
+                    textDecoration: 'none',
+                    fontSize: '0.875rem',
+                    fontWeight: active ? 700 : 500,
+                    padding: '0.45rem 0.9rem',
+                    borderRadius: 4,
+                    display: 'block',
+                    background: active ? 'rgba(201,162,39,0.15)' : 'transparent',
+                    borderBottom: active ? `2px solid ${GOLD}` : '2px solid transparent',
+                    transition: 'all 0.2s',
+                  }}>
+                    {l.label}
+                  </Link>
+                )}
               </li>
             );
           })}
@@ -269,7 +289,32 @@ const Navbar = () => {
         <nav style={{ flex:1, padding:'0.75rem 0' }}>
           {links.map(l => {
             const active = location.pathname === l.to;
-            return (
+            return l.external ? (
+              <a
+                key={l.to}
+                href={l.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.85rem',
+                  padding: '0.85rem 1.5rem',
+                  color: GOLD,
+                  textDecoration: 'none',
+                  fontSize: '0.95rem',
+                  fontWeight: 600,
+                  background: 'rgba(201,162,39,0.1)',
+                  borderLeft: `3px solid ${GOLD}`,
+                  transition: 'all 0.15s',
+                }}
+              >
+                <span style={{ fontSize:'1.1rem', width:22, textAlign:'center' }}>📖</span>
+                {l.label}
+                <span style={{ marginLeft:'auto', fontSize:'0.72rem', color:'rgba(201,162,39,0.7)' }}>↗</span>
+              </a>
+            ) : (
               <Link
                 key={l.to}
                 to={l.to}
