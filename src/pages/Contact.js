@@ -34,7 +34,7 @@ export default function Contact() {
           <div>
             <h2 style={{color:M,marginBottom:'1.5rem',fontFamily:'Georgia,serif',fontSize:'1.4rem'}}>Reach Us</h2>
             {[{icon:'📍',label:'Address',value:'Kuzhimattom, Kottayam, Kerala, India'},
-              {icon:'📞',label:'Phone',value:'+91 XXXXX XXXXX'},
+              {icon:'📞',label:'Phone',value:'+91 7558043864'},
               {icon:'✉️',label:'Email',value:'ocymkuzhimattom@gmail.com'}].map(c=>(
               <div key={c.label} style={{display:'flex',gap:'1rem',marginBottom:'1.5rem',alignItems:'flex-start'}}>
                 <div style={{width:44,height:44,borderRadius:'50%',background:M,display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1.1rem',flexShrink:0}}>{c.icon}</div>
